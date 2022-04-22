@@ -1,0 +1,298 @@
+html {
+    height: 100%;
+    --bg:#7b9c98 ;
+    --sub:#495755 ;
+    --text:#eaf1f3 ;
+    overflow-y: hidden;
+}
+body {
+    height: 100%;
+    background-color: var(--bg);
+}
+div#root {
+    height:100%;
+    background-color: var(--bg);
+    color:var(--text)
+}
+div#appDiv {
+    height:95% /* 740px */;
+    display: grid;
+    justify-content:center;
+    grid-template-rows: max-content auto;    
+}
+div#wrapper {
+    position:absolute;
+    height:100%;
+    width: 1120px;
+    display:grid;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    justify-content: center;
+    /* grid-template-columns:20% 60% 20%; */
+    grid-template-rows: 20% 10% 15% 50% 40%;
+    margin:auto;
+    margin-left:16px;
+    left:5%;
+    z-index:1;
+    background-color:var(--sub);
+    transition:transform 0.3s;
+    
+}
+#wrapper.display-none {
+    display:none;
+}
+#wrapper.display-grid {
+    display:grid;
+}
+#wrapper > h1 {
+    margin:auto;
+    /* grid-column: 2 / 3; */
+}
+#wrapper > h4 {
+    margin:auto;
+    /* grid-column: 2 / 3; */
+}
+#wrapper > p {
+    margin:auto;
+    /* grid-column: 2 / 3; */
+}
+#wrapper > aside {
+    margin: auto;
+}
+aside {
+    text-align: center;
+}
+#wrapper > footer {
+    position:relative;
+    width:100%;
+    text-align: center;    
+    bottom:-30%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 5%;
+}
+#wrapper> footer > h4 {
+    grid-column: 1 / 5;
+}
+#wrapper > footer > span {
+    display:block;
+    margin:10px;
+}
+#wrapper > footer > span:hover {
+    background-color: var(--bg);
+    color: var(--sub);
+    cursor:pointer;
+}
+#wrapper > footer > span.margin-bottom {
+    display:block;
+    margin-bottom:50px;
+}
+
+
+div#tableContainer {
+    height:100%;
+    overflow-y: scroll;
+    scrollbar-width:none;
+    margin-top: 8px;
+
+    display:grid;
+}
+table {
+    display:table;
+    border-collapse: collapse;
+    margin:0;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border:var(--bg);
+
+    background-color:var(--sub);
+
+    /* border:1px black solid; */
+}
+tr {
+    border:1px var(--bg) solid;
+    background-color:var(--sub);
+}
+td {
+    border:1px var(--bg) solid;
+    vertical-align: middle;
+    text-align: center;
+    background-color:var(--sub);
+}
+form {
+    position:relative;
+    width:1120px;
+    margin: 5px auto auto;
+    display:grid;
+    grid-template-areas: "parameters parameters" "options highlight" "filter filter";
+}
+#parameters {
+    position:relative;
+    grid-area:"parameters";
+    grid-column: 1 / 3;
+    display:grid;
+    grid-template-areas: "min min max max reps reps  step step stepVal";
+    /* border:1px black solid; */
+    background-color: var(--sub);
+}
+*::selection {
+    color:var(--sub);
+    background-color:var(--text);
+}
+#parameters > * {
+    margin: auto;
+    border:none;
+    border-radius:none;
+}
+#highlightDiv {
+    grid-area:"highlight";
+    grid-column:1 /3;
+    display:none;
+    grid-template-areas: "tar tar bin bin";
+    grid-template-columns: 8% 31.8% 16% auto;
+    background-color: var(--sub);
+}
+#highlightDiv > * {
+    margin:auto auto auto 18%
+}
+#highlightDiv > label {
+    margin: auto auto auto 30%
+}
+
+#highlightDiv > #highlightRange {
+    margin: auto auto auto 2.5%
+}
+
+
+button {
+    cursor:pointer;
+    background-color:var(--sub);
+    color:var(--text);
+    margin:2px;
+    border:1px var(--bg) solid;
+    box-sizing: border-box;
+}
+button:focus {
+    outline:var(--bg) 2px solid;
+}
+label, input {
+    margin:0px;
+}
+label {
+    margin-right: 5px;
+}
+input {
+    max-width: 50px;
+    border: none;
+    background-color:var(--sub);
+    color:var(--text);
+    outline: none;
+}
+input[type=checkbox]:focus {
+    outline:var(--bg) 2px solid;
+}
+
+
+
+#options {
+    grid-area: "options";
+    grid-column:1/3;
+    display:none;
+    grid-template-areas: "convert invert reverse display";
+    grid-template-columns: 20% 20% 25% 1fr;
+    background-color: var(--sub);
+}
+
+#options > #convert { 
+    margin:auto auto auto 11.5%;
+}
+
+#options > #inverter {
+    margin: auto;
+    margin-left: 17%; 
+}
+
+#options > #reverserDiv {
+    margin: auto;
+    margin-left: 18.7%;
+}
+
+#options > #reverserDiv > input{
+    margin-left: 11px;
+}
+
+#options > * {
+    margin: auto;
+    margin-left: 4.5%;
+}
+
+#filter {
+
+    grid-column: 1 / 3;
+    display:none;
+    grid-template-areas: "row column restore";
+    background-color: var(--sub);
+
+}
+
+
+
+#formDisplay {
+    position:absolute;
+    background-color: var(--sub);
+    box-sizing:border-box;
+    height: 100%;
+    width: 4%;
+    right:101%;
+    top:0%;
+    border:1px inset var(--bg);
+
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+}
+ #formDisplay > div {
+    background-color:var(--text);
+    color:var(--sub);
+    font-size:xx-small;
+    text-align: center;
+    font-weight:bold;
+    height: 60%;
+    width: 55%;
+    display:grid;
+    margin: auto;
+    cursor:pointer;
+    box-shadow: 0.5px 0.5px var(--bg);
+ }
+
+ #formDisplay > div > * {
+     margin:auto;
+ }
+
+ #filter > div {
+    display:grid;
+    grid-template-areas: "label input toggle"
+ }
+ #filter > div > * {
+     margin:auto;
+ }
+ #filter > #filterColDiv {
+     margin-left: 1.4%
+ }
+ #filter > #filterRowDiv {
+     margin-left:3.15%
+ }
+ #filter > #restoreAll {
+     grid-template-areas: "button";
+    margin-left:31%;
+ }
+
+ #filterColDiv > input {
+    margin-left:26.5%
+ }
+
+ #filter > #filterRowDiv {
+     grid-template-columns: 30% 15% auto;
+ }
+ #filterRowDiv > input {
+     margin-left:0;
+ }
