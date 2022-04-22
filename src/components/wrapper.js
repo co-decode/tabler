@@ -68,11 +68,14 @@ const Wrapper = () => {
     htmlEl.style.setProperty("--bg","#646669");
     htmlEl.style.setProperty("--text","#e2b714");
 }
-function changeTheme8008() {
+function changeThemeClassic() {
     const htmlEl = document.getElementById('html');
-    htmlEl.style.setProperty("--bg","#333a45");
-    htmlEl.style.setProperty("--sub","#939eae");
-    htmlEl.style.setProperty("--text","#f44c7f");
+    htmlEl.style.setProperty("--bg","#fff");
+    htmlEl.style.setProperty("--sub","#fafafa");
+    htmlEl.style.setProperty("--text","#000");
+    htmlEl.style.setProperty("--hl","yellow");
+    htmlEl.style.setProperty("--subT","black");
+    htmlEl.style.setProperty("--textH","var(--bg)");
 }
 function changeThemeBotanical() {
     const htmlEl = document.getElementById('html');
@@ -153,7 +156,7 @@ function changeThemeAlpine() {
       <footer>
         <h4>Choose a Theme:</h4>
         <span onClick={changeThemeBotanical}>Botanical</span>
-        <span onClick={changeTheme8008}>8008</span>
+        <span onClick={changeThemeClassic}>Classic</span>
         <span onClick={changeThemeAlpine}>Alpine</span>
         <span onClick={changeThemeStrawberry}>Strawberry</span>
         <span onClick={changeThemeFrooChew}>FrooChew</span>

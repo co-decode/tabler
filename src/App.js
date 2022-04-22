@@ -80,9 +80,9 @@ function App() {
     for (x; x < target + bin; x += 0.1) {
       if (document.getElementsByClassName(`${x.toFixed(1)}`)) {
         document.querySelectorAll(`td[class="${x.toFixed(1)}"]`)
-          .forEach(val=> {val.style.setProperty('background-color','var(--bg)');
-                          val.style.setProperty('border','var(--text) 1px solid');
-                          val.style.setProperty('color','var(--sub)');
+          .forEach(val=> {val.style.setProperty('background-color','var(--hl)');
+                          val.style.setProperty('border','var(--textH) 1px solid');
+                          val.style.setProperty('color','var(--subT)');
         })
       }
     }

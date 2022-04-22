@@ -3,6 +3,9 @@ html {
     --bg:#7b9c98 ;
     --sub:#495755 ;
     --text:#eaf1f3 ;
+    --hl: var(--bg);
+    --subT:var(--sub);
+    --textH:var(--text);
     overflow-y: hidden;
 }
 body {
