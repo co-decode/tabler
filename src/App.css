@@ -1,11 +1,12 @@
 html {
     height: 100%;
-    --bg:#7b9c98 ;
-    --sub:#495755 ;
-    --text:#eaf1f3 ;
-    --hl: var(--bg);
-    --subT:var(--sub);
-    --textH:var(--text);
+    --bg:#fff;
+    --sub:#fafafa ;
+    --text:#000 ;
+    --hl: yellow;
+    --subT:black;
+    --textH:var(--bg);
+    --bord:black;
     overflow-y: hidden;
 }
 body {
@@ -18,15 +19,19 @@ div#root {
     color:var(--text)
 }
 div#appDiv {
-    height:95% /* 740px */;
+    position:relative;
+    height:100% /* 740px */;
+    width:100%;
     display: grid;
     justify-content:center;
     grid-template-rows: max-content auto;    
+    grid-template-columns:90%;    
 }
 div#wrapper {
     position:absolute;
     height:100%;
-    width: 1120px;
+    width: 100%;
+    min-height:550px;
     display:grid;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -34,8 +39,8 @@ div#wrapper {
     /* grid-template-columns:20% 60% 20%; */
     grid-template-rows: 20% 10% 15% 50% 40%;
     margin:auto;
-    margin-left:16px;
-    left:5%;
+    margin-left:0;
+    left:0;
     z-index:1;
     background-color:var(--sub);
     transition:transform 0.3s;
@@ -93,7 +98,8 @@ aside {
 
 
 div#tableContainer {
-    height:100%;
+    height:95%;
+    width:100%;
     overflow-y: scroll;
     scrollbar-width:none;
     margin-top: 8px;
@@ -124,7 +130,7 @@ td {
 }
 form {
     position:relative;
-    width:1120px;
+    width:100%;
     margin: 5px auto auto;
     display:grid;
     grid-template-areas: "parameters parameters" "options highlight" "filter filter";
@@ -176,7 +182,7 @@ button {
     box-sizing: border-box;
 }
 button:focus {
-    outline:var(--bg) 2px solid;
+    outline:var(--bord) 2px solid;
 }
 label, input {
     margin:0px;
@@ -192,7 +198,7 @@ input {
     outline: none;
 }
 input[type=checkbox]:focus {
-    outline:var(--bg) 2px solid;
+    outline:var(--bord) 2px solid;
 }
 
 
