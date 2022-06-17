@@ -12,7 +12,7 @@ Also known as WEC for short.
 
 Git and Github were used for version control.
 The environment was set up with create-react-app.
-This project has been deployed on netlify.
+This project has been deployed on Netlify.
 
 ## Instructions:
 
