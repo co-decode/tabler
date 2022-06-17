@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/co-decode/tabler/static/css/main.38eb4714.css",
+    "main.js": "/co-decode/tabler/static/js/main.6b7aae44.js",
+    "index.html": "/co-decode/tabler/index.html",
+    "main.38eb4714.css.map": "/co-decode/tabler/static/css/main.38eb4714.css.map",
+    "main.6b7aae44.js.map": "/co-decode/tabler/static/js/main.6b7aae44.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38eb4714.css",
+    "static/js/main.6b7aae44.js"
+  ]
+}
